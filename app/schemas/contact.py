@@ -1,5 +1,7 @@
 from pydantic import BaseModel, EmailStr
 from datetime import date
+from typing import Optional
+
 
 class ContactBase(BaseModel):
     first_name: str
@@ -7,10 +9,12 @@ class ContactBase(BaseModel):
     email: EmailStr
     phone: str
     birthday: date
-    additional_info: str | None = None
+    additional_info: Optional[str] = None
+
 
 class ContactCreate(ContactBase):
     pass
+
 
 class ContactRead(ContactBase):
     id: int

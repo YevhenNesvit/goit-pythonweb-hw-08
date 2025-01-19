@@ -2,6 +2,7 @@ from sqlalchemy.orm import Session
 from app.models.contact import Contact
 from app.schemas.contact import ContactCreate
 
+
 class ContactRepository:
     def create(self, db: Session, contact: ContactCreate):
         new_contact = Contact(**contact.dict())

@@ -3,6 +3,7 @@ from app.repositories.contact_repo import ContactRepository
 from app.schemas.contact import ContactCreate
 from fastapi import HTTPException
 
+
 class ContactService:
     def __init__(self):
         self.repo = ContactRepository()
